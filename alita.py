@@ -76,12 +76,12 @@ class Alita:
 
             print("answers_ids",answers_ids)
 
-            aws_ids = Counter(answers_ids).most_common(3)
+            aws_ids = Counter(answers_ids).most_common(10)
             print("aws_ids:",aws_ids)
 
             a=[]
             for k,v in aws_ids:            
-                for i in range(0,v): #增加答案权重
+                for i in range(0,v*v): #增加答案权重
                     a.append(k)
             print("a:",a)
 
